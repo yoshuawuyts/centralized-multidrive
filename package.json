@@ -1,6 +1,6 @@
 {
-  "name": "multidrive",
-  "version": "1.0.1",
+  "name": "centralized-multidrive",
+  "version": "1.0.0",
   "description": "Manage multiple hyperdrives in a central location",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "standard && npm run deps",
     "test:cov": "standard && npm run deps"
   },
-  "repository": "yoshuawuyts/multidrive",
+  "repository": "yoshuawuyts/centralized-multidrive",
   "keywords": [
     "hyperdrive",
     "hypercore",

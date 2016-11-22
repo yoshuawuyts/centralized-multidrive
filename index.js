@@ -9,8 +9,8 @@ module.exports = Multidrive
 // manage a collection of hyperdrives
 // (str, fn) -> null
 function Multidrive (name, cb) {
-  assert.equal(typeof name, 'string', 'multidrive: name should be a string')
-  assert.equal(typeof cb, 'function', 'multidrive: cb should be a function')
+  assert.equal(typeof name, 'string', 'centralized-multidrive: name should be a string')
+  assert.equal(typeof cb, 'function', 'centralized-multidrive: cb should be a function')
 
   const self = this
 
@@ -36,8 +36,8 @@ function Multidrive (name, cb) {
 
 // (str, fn) -> null
 Multidrive.prototype.create = function (name, cb) {
-  assert.equal(typeof name, 'string', 'multidrive.create: name should be a string')
-  assert.equal(typeof cb, 'function', 'multidrive.create: cb should be a function')
+  assert.equal(typeof name, 'string', 'centralized-multidrive.create: name should be a string')
+  assert.equal(typeof cb, 'function', 'centralized-multidrive.create: cb should be a function')
 
   const db = level(name)
   const drive = hyperdrive(db)
@@ -50,14 +50,14 @@ Multidrive.prototype.create = function (name, cb) {
 
 // (str, fn) -> null
 Multidrive.prototype.delete = function (name, cb) {
-  assert.equal(typeof name, 'string', 'multidrive.delete: name should be a string')
-  assert.equal(typeof cb, 'function', 'multidrive.delete: cb should be a function')
+  assert.equal(typeof name, 'string', 'centralized-multidrive.delete: name should be a string')
+  assert.equal(typeof cb, 'function', 'centralized-multidrive.delete: cb should be a function')
   this.db.del(name, cb)
 }
 
 // (fn) -> null
 Multidrive.prototype.list = function (cb) {
-  assert.equal(typeof cb, 'function', 'multidrive.list: cb should be a function')
+  assert.equal(typeof cb, 'function', 'centralized-multidrive.list: cb should be a function')
   if (this.ready) cb(null, this.drives)
   else this.queue.push(cb)
 }

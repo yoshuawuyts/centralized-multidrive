@@ -32,7 +32,7 @@ drives.create('cute-cats', (err, drive) => {
 ```
 
 ## API
-### drives = centralized-multidrive(name, callback)
+### drives = multidrive(name, callback)
 Create a new `centralized-multidrive` instance
 
 ### drives.list(callback(err, drives))
